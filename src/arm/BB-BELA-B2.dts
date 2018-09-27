@@ -172,6 +172,7 @@
 			pinctrl-1 = <&bela_pru_pins>;
 
 			status = "okay";
+			interrupt-names = "dummytx", "dummyrx";
 
 			op-mode = <0>;	// MCASP_IIS_MODE
 			tdm-slots = <2>;
