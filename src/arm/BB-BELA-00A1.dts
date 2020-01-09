@@ -24,7 +24,6 @@
 			P2_26_pinmux { status = "disabled"; };
 			P2_30_pinmux { status = "disabled"; };
 			P2_32_pinmux { status = "disabled"; };
-			P2_33_pinmux { status = "disabled"; };
 			P2_34_pinmux { status = "disabled"; };
 			P1_05_pinmux { status = "disabled"; };
 			P1_06_pinmux { status = "disabled"; };
