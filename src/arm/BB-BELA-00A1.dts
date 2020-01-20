@@ -126,6 +126,14 @@
 				>;
 			};
 
+			// Pinmux for i2c2 for Bela codec
+			i2c2_pins: pinmux_i2c2_pins {
+				pinctrl-single,pins = <
+					0x17c 0x33 // i2c2_scl | P9.20/P1.28 | MODE3 | INPUT_PULLUP
+					0x178 0x33 // i2c2_sda | P9.19/P1.26 | MODE3 | INPUT_PULLUP
+				>;
+			};
+
 			/* pinmux for BB digitals */
 			bb_digitals: pinmux_bb_digitals {
 				pinctrl-single,pins = <
@@ -265,4 +273,17 @@
 		};
 	};
 			
+	fragment@9 {
+
+		target = <&i2c2>;
+		__overlay__ {
+			pinctrl-names = "default";
+			pinctrl-0 = <&i2c2_pins>;
+
+			status = "okay";
+			clock-frequency = <400000>;
+		};
+
+	};
+
 };
