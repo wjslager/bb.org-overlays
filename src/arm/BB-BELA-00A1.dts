@@ -37,6 +37,8 @@
 			P1_29_pinmux { status = "disabled"; };
 			P1_33_pinmux { status = "disabled"; };
 			P1_36_pinmux { status = "disabled"; };
+			P9_19_pinmux { status = "disabled"; };
+			P9_20_pinmux { status = "disabled"; };
 			P9_25_pinmux { status = "disabled"; }; /* mcasp0_ahclkx */
 			P9_28_pinmux { status = "disabled"; }; /* mcasp0_axr2 */
 			P9_29_pinmux { status = "disabled"; }; /* mcasp0_fsx */
