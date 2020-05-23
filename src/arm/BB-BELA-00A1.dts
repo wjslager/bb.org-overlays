@@ -229,7 +229,14 @@
 		};
 	};
 
-	fragment@6 {
+	fragment@6 { // this is only needed by BBG, where uart2 is enabled, and its pins conflict with our spi0
+		target = <&uart2>;
+		__overlay__ {
+			status = "disabled";
+		};
+	};
+
+	fragment@7 {
 		target = <&spi0>;
 		__overlay__ {
 			pinctrl-names = "default";
@@ -239,7 +246,7 @@
 		};
 	};
 
-	fragment@7 {
+	fragment@8 {
 		target = <&ocp>;
 		__overlay__ {
 			P2_01_pinmux{ pinctrl-0 = <&P2_01_bela>; };
@@ -263,7 +270,7 @@
 		};
 	};
 
-	fragment@8 {
+	fragment@9 {
 		target-path="/";
 		__overlay__ {
 			bela_digitals {
@@ -275,7 +282,7 @@
 		};
 	};
 			
-	fragment@9 {
+	fragment@10 {
 
 		target = <&i2c2>;
 		__overlay__ {
@@ -287,5 +294,4 @@
 		};
 
 	};
-
 };
