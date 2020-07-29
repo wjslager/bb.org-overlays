@@ -38,7 +38,7 @@
 			//pinctrl-names = "default"; // no pins here, as this would make us unable to set them via config-pin
 			//pinctrl-0 = <&pinctrl_eqep2>;
 
-			count_mode = <1>;	// count_mode is not userspace op_mode
+			count_mode = <0>;	// count_mode is not userspace op_mode
 			// 0 -> Quadrature mode, normal 90 phase offset cha & chb.
 			// 1 -> Direction mode.  cha input = clock, chb input = direction
 			// 2 -> UP count mode for frequency measurement QDIR=1, ignore direction input
