@@ -70,7 +70,7 @@
 					0x1ac 0x00 /* mcasp0_ahclkx, 		P9_25 | MODE0 | OUTPUT_PULLDOWN */
 					0x19c 0x22 /* mcasp0_axr2, 			P9_28 | MODE2 | INPUT_PULLDOWN */
 					0x194 0x20 /* mcasp0_fsx, 			P9_29 | MODE0 | INPUT_PULLDOWN */
-					0x190 0x20 /* mcasp0_ahclk, 		P9_31 | MODE0 | INPUT_PULLDOWN */
+					0x190 0x20 /* mcasp0_aclkx, 		P9_31 | MODE0 | INPUT_PULLDOWN */
 					0x198 0x20 /* mcasp0_axr0, 			P9_30 | MODE0 | INPUT_PULLDOWN */
 				>;
 			};
