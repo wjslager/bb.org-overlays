@@ -1,0 +1,68 @@
+/* 2022, Ward Slager */
+/dts-v1/;
+/plugin/;
+
+#include <dt-bindings/gpio/gpio.h>
+#include <dt-bindings/pinctrl/am33xx.h>
+
+/ {
+	compatible = "ti,beaglebone", "ti,beaglebone-black", "ti,beaglebone-green";
+
+	// Free pins used by the pinmux helpers
+	fragment@0 {
+		target = <&ocp>;
+		__overlay__ {
+			cape-universal { status = "disabled"; };
+
+			P8_38_pinmux { status = "disabled"; };	// gate 3
+			P8_39_pinmux { status = "disabled"; };	// gate 4
+			P8_40_pinmux { status = "disabled"; };	// gate 5
+
+			// Not sure if pinmux makes a distinction between 41A and 41B
+			P9_41_pinmux { status = "disabled"; };	// OLED SPI CS
+			P9_23_pinmux { status = "disabled"; };	// OLED SPI DC
+			P9_17_pinmux { status = "disabled"; };	// ADC SPI CS A
+			P9_15_pinmux { status = "disabled"; };	// ADC SPI CS B
+		};
+	};
+
+	// Free pins used by i2c2 (BELA)
+	fragment@1 {
+		target = <&i2c2>;
+		__overlay__ {
+			status = "disabled";
+		};
+	};
+
+	// Configure pinmux
+	fragment@2 {
+		target = <&am33xx_pinmux>;
+		__overlay__ {
+			bb_ward_gpios: pinmux_bb_ward_gpios {
+				pinctrl-single,pins = <
+					0x8C4 0x17	/* P8.38	GPIO output pullup */
+					0x8B8 0x17	/* P8.39	GPIO output pullup */
+					0x8BC 0x17	/* P8.40	GPIO output pullup */
+					0x9B4 0x17	/* P9.41A	GPIO output pullup */
+					0x9A8 0x2F	/* P9.41B	input, no pullup or down */
+					0x844 0x17	/* P9.23	GPIO output pullup */
+					0x95C 0x17	/* P9.17	GPIO output pullup*/
+					0x840 0x17	/* P9.15	GPIO output pullup */
+				>;
+			};
+		};
+	};
+
+	fragment@3 {
+		target-path="/";
+		__overlay__ {
+			ward_gpios {
+				compatible = "gpio-leds";
+				pinctrl-0 = <&bb_ward_gpios>;
+				pinctrl-1 = <&bb_ward_gpios>;
+				pinctrl-names = "default", "sleep";
+			};
+		};
+	};
+};
+
