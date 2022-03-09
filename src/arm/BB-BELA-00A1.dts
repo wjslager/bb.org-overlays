@@ -140,22 +140,22 @@
 			bb_digitals: pinmux_bb_digitals {
 				pinctrl-single,pins = <
 					/* Pinmux for GPIO (digital i/o) */
-					0x090 0x27 /* gpio2[2], 			P8_07 | MODE7 | INPUT_PULLDOWN */
-					0x094 0x27 /* gpio2[3], 			P8_08 | MODE7 | INPUT_PULLDOWN */
-					0x09c 0x27 /* gpio2[5], 			P8_09 | MODE7 | INPUT_PULLDOWN */
-					0x098 0x27 /* gpio2[4], 			P8_10 | MODE7 | INPUT_PULLDOWN */
-					0x034 0x27 /* gpio1[13],			P8_11 | MODE7 | INPUT_PULLDOWN */
-					0x030 0x27 /* gpio2[13],			P8_12 | MODE7 | INPUT_PULLDOWN */
-					0x078 0x27 /* gpio1[28],			P9_12 | MODE7 | INPUT_PULLDOWN */
-					0x048 0x27 /* gpio1[18],			P9_14 | MODE7 | INPUT_PULLDOWN */
-					0x03c 0x27 /* gpio1[15],			P8_15 | MODE7 | INPUT_PULLDOWN */
-					0x038 0x27 /* gpio1[14], 			P8_16 | MODE7 | INPUT_PULLDOWN */
-					0x04c 0x27 /* gpio1[19],			P9_16 | MODE7 | INPUT_PULLDOWN */
-					0x08c 0x27 /* gpio2[1], 			P8_18 | MODE7 | INPUT_PULLDOWN */
-					0x0e0 0x27 /* gpio2[22],			P8_27 | MODE7 | INPUT_PULLDOWN */
-					0x0e8 0x27 /* gpio2[24],			P8_28 | MODE7 | INPUT_PULLDOWN */
-					0x0e4 0x27 /* gpio2[23],			P8_29 | MODE7 | INPUT_PULLDOWN */
-					0x0ec 0x27 /* gpio2[25],			P8_30 | MODE7 | INPUT_PULLDOWN */
+					0x090 0x2F /* gpio2[2], 			P8_07 | MODE7 | INPUT_PULLDOWN */
+					0x094 0x2F /* gpio2[3], 			P8_08 | MODE7 | INPUT_PULLDOWN */
+					0x09c 0x2F /* gpio2[5], 			P8_09 | MODE7 | INPUT_PULLDOWN */
+					0x098 0x2F /* gpio2[4], 			P8_10 | MODE7 | INPUT_PULLDOWN */
+					0x034 0x2F /* gpio1[13],			P8_11 | MODE7 | INPUT_PULLDOWN */
+					0x030 0x2F /* gpio2[13],			P8_12 | MODE7 | INPUT_PULLDOWN */
+					0x078 0x2F /* gpio1[28],			P9_12 | MODE7 | INPUT_PULLDOWN */
+					0x048 0x2F /* gpio1[18],			P9_14 | MODE7 | INPUT_PULLDOWN */
+					0x03c 0x2F /* gpio1[15],			P8_15 | MODE7 | INPUT_PULLDOWN */
+					0x038 0x2F /* gpio1[14], 			P8_16 | MODE7 | INPUT_PULLDOWN */
+					0x04c 0x2F /* gpio1[19],			P9_16 | MODE7 | INPUT_PULLDOWN */
+					0x08c 0x2F /* gpio2[1], 			P8_18 | MODE7 | INPUT_PULLDOWN */
+					0x0e0 0x2F /* gpio2[22],			P8_27 | MODE7 | INPUT_PULLDOWN */
+					0x0e8 0x2F /* gpio2[24],			P8_28 | MODE7 | INPUT_PULLDOWN */
+					0x0e4 0x2F /* gpio2[23],			P8_29 | MODE7 | INPUT_PULLDOWN */
+					0x0ec 0x2F /* gpio2[25],			P8_30 | MODE7 | INPUT_PULLDOWN */
 				>;
 			};	
 		};
